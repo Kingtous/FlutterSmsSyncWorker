@@ -1,16 +1,18 @@
-# sms_helper
+### FlutterSmsSyncWorker
 
-A new Flutter project.
+**(Android/IOS)实现短信内容实时拦截并上传服务器并且能查看云端短信内容的Flutter APP.**
 
-## Getting Started
+功能：
 
-This project is a starting point for a Flutter application.
+- 用户登录注册(手机号)
+- 短信内容实时拦截并上传服务器(只支持安卓)
+- 查看属于自己(手机号)的云端短信内容
 
-A few resources to get you started if this is your first Flutter project:
+#### 服务端程序
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- 在`server`文件夹中，使用[deployd](https://github.com/deployd/deployd)进行部署
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### 项目地址
+
+[Github](https://github.com/Kingtous/FlutterSmsSyncWorker)
+

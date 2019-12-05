@@ -1,6 +1,6 @@
 class Config{
 
-  static String baseUrl = "";
+  static String baseUrl = "http://123.206.34.50:2403/";
 
   static String uploadSmsUrl = baseUrl + "sms";
 
