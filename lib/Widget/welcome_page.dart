@@ -5,7 +5,6 @@ import 'package:flutter_lottie/flutter_lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_helper/Application/application.dart';
 import 'package:sms_helper/Tool/routes.dart';
-import 'package:sms_helper/Tool/sms_tool.dart';
 
 class WelcomePage extends StatefulWidget {
   @override
@@ -19,7 +18,7 @@ class _WelcomePageState extends State<WelcomePage> {
   void initState() {
     super.initState();
     var timer = Timer(Duration(milliseconds: 2000), () {
-      Navigator.popAndPushNamed(context, Routes.index);
+      Application.router.navigateTo(context, Routes.index, replace: true);
     });
   }
 

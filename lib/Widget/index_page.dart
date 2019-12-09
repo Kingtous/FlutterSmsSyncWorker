@@ -5,10 +5,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sms_helper/Application/application.dart';
 import 'package:sms_helper/Tool/routes.dart';
 import 'package:sms_helper/Tool/sms_tool.dart';
-import 'package:sms_helper/Widget/login_page.dart';
-import 'package:sms_helper/main.dart';
-
-import 'home_page.dart';
 
 class IndexPage extends StatefulWidget {
   @override
@@ -21,11 +17,13 @@ class _IndexPageState extends State<IndexPage> {
   Future<void> _init() async {
     Application.sp = await SharedPreferences.getInstance();
     isLogin = await SmsTool.checkIfLogin();
-    if (isLogin) {
-      Navigator.popAndPushNamed(context, Routes.main);
-    } else {
-      Navigator.popAndPushNamed(context, Routes.login);
-    }
+    Future.delayed(Duration.zero, () {
+      if (isLogin) {
+        Navigator.pushReplacementNamed(context, Routes.main);
+      } else {
+        Navigator.pushReplacementNamed(context, Routes.login);
+      }
+    });
   }
 
   @override

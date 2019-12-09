@@ -10,7 +10,7 @@ import 'package:sms_helper/Widget/welcome_page.dart';
 
 class Routes {
   static String index = "/index";
-  static String welcome = "/";
+  static String welcome = "/welcome";
   static String login = "/login";
   static String main = "/main";
   static String smsSend = "/sms/send";
@@ -38,11 +38,11 @@ class Routes {
     router.define(smsSend,
         handler: Handler(handlerFunc: (BuildContext context,Map<String,List<String>> params) {
           return SmsSendPage();
-        }), transitionType: TransitionType.fadeIn);
+        }), transitionType: TransitionType.cupertino);
     router.define(smsGet,
         handler: Handler(handlerFunc: (BuildContext context,Map<String,List<String>> params) {
           return SmsGetPage();
-        }), transitionType: TransitionType.fadeIn);
+        }), transitionType: TransitionType.cupertino);
 
     router.define(logout,
         handler: Handler(handlerFunc: (BuildContext context,Map<String,List<String>> params) {

@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:sms_helper/Application/application.dart';
+import 'package:sms_helper/Widget/welcome_page.dart';
 
 import 'Tool/routes.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      home: WelcomePage(),
       onGenerateRoute: Application.router.generator,
     );
   }
